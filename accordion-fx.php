@@ -2,23 +2,24 @@
 /*
 Plugin Name: Accordion FX
 Plugin URI: http://www.flashxml.net/accordion.html
-Description: The Accordion FX might be the most advanced Flash accordion on the web. Fully XML customizable, without using Flash. And it's free!
-Version: 0.1
+Description: 
+The Accordion FX might be the most advanced Flash accordion on the web. Fully XML customizable, without using Flash. And it's free!
+Version: 0.1.1
 Author: FlashXML.net
 Author URI: http://www.flashxml.net/
 License: GPL2
 */
 
-	$fx_params = array(
+	$accordionfx_params = array(
 		'count'	=> 0, // number of Accordion FX embeds
 	);
 
-	function fx_get_embed_code($fx_attributes) {
+	function accordionfx_get_embed_code($accordionfx_attributes) {
 		$plugin_dir = basename(dirname(__FILE__));
-		global $fx_params;
-		$fx_params['count']++;
+		global $accordionfx_params;
+		$accordionfx_params['count']++;
 
-		$settings_file_name = !empty($fx_attributes[2]) ? $fx_attributes[2] : 'settings.xml';
+		$settings_file_name = !empty($accordionfx_attributes[2]) ? $accordionfx_attributes[2] : 'settings.xml';
 		$settings_file_path = WP_PLUGIN_DIR."/{$plugin_dir}/component/$settings_file_name";
 
 		if (file_exists($settings_file_path)) {
@@ -34,16 +35,16 @@ License: GPL2
 		$swf_embed = array(
 			'width' => $width,
 			'height' => $height,
-			'text' => trim($fx_attributes[3]),
+			'text' => trim($accordionfx_attributes[3]),
 			'component_path' => WP_PLUGIN_URL."/{$plugin_dir}/component/",
 			'swf_name' => 'accordion.swf',
 		);
 		$swf_embed['swf_path'] = $swf_embed['component_path'].$swf_embed['swf_name'];
 
 		if (!is_feed()) {
-			$embed_code = '<div id="accordion-fx'.$fx_params['count'].'">'.$swf_embed['text'].'</div>';
+			$embed_code = '<div id="accordion-fx'.$accordionfx_params['count'].'">'.$swf_embed['text'].'</div>';
 			$embed_code .= '<script type="text/javascript">';
-			$embed_code .= "swfobject.embedSWF('{$swf_embed['swf_path']}', 'accordion-fx{$fx_params['count']}', '{$swf_embed['width']}', '{$swf_embed['height']}', '9.0.0.0', '', { folderPath: '{$swf_embed['component_path']}'".($settings_file_name != 'settings.xml' ? ", settingsXML: '{$settings_file_name}'" : '')." }, { scale: 'noscale', salign: 'tl', wmode: 'transparent', allowScriptAccess: 'sameDomain', allowFullScreen: true }, {});";
+			$embed_code .= "swfobject.embedSWF('{$swf_embed['swf_path']}', 'accordion-fx{$accordionfx_params['count']}', '{$swf_embed['width']}', '{$swf_embed['height']}', '9.0.0.0', '', { folderPath: '{$swf_embed['component_path']}'".($settings_file_name != 'settings.xml' ? ", settingsXML: '{$settings_file_name}'" : '')." }, { scale: 'noscale', salign: 'tl', wmode: 'transparent', allowScriptAccess: 'sameDomain', allowFullScreen: true }, {});";
 			$embed_code.= '</script>';
 		} else {
 			$embed_code = '<object width="'.$swf_embed['width'].'" height="'.$swf_embed['height'].'">';
@@ -63,19 +64,19 @@ License: GPL2
 		return $embed_code;
 	}
 
-	function fx_filter_content($content) {
-		return preg_replace_callback('|\[accordion-fx\s*(settings="([^\]]+)")?\s*\](.*)\[/accordion-fx\]|i', 'fx_get_embed_code', $content);
+	function accordionfx_filter_content($content) {
+		return preg_replace_callback('|\[accordion-fx\s*(settings="([^\]]+)")?\s*\](.*)\[/accordion-fx\]|i', 'accordionfx_get_embed_code', $content);
 	}
 
-	function fx_echo_embed_code($settings_xml_path = '', $div_text = '') {
-		echo fx_get_embed_code(array(2 => $settings_xml_path, 3 => $div_text));
+	function accordionfx_echo_embed_code($settings_xml_path = '', $div_text = '') {
+		echo accordionfx_get_embed_code(array(2 => $settings_xml_path, 3 => $div_text));
 	}
 
-	function fx_load_swfobject_lib() {
+	function accordionfx_load_swfobject_lib() {
 		wp_enqueue_script('swfobject');
 	}
 
-	add_filter('the_content', 'fx_filter_content');
-	add_action('init', 'fx_load_swfobject_lib');
+	add_filter('the_content', 'accordionfx_filter_content');
+	add_action('init', 'accordionfx_load_swfobject_lib');
 
 ?>
