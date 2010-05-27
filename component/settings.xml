@@ -1,0 +1,71 @@
+<settings>
+  <Settings>
+    <settingsXML value="settings.xml"/>
+  </Settings>
+  <General_Properties>
+    <width value="600"/>
+    <height value="300"/>
+    <orientation value="vertical"/>
+    <elements value="6"/>
+    <startItem value="0"/>
+    <movementSpeed value="20"/>
+    <randomImages value="false"/>
+    <images value="images.xml"/>
+    <showAbout value="false"/>
+    <navBar value="componentImages/left.png"/>
+    <playBtn value="componentImages/play.png"/>
+    <pauseBtn value="componentImages/pause.png"/>
+	<useLightbox value = "false" />
+  </General_Properties>
+  <Image_Properties>
+    <barSize value="50"/>
+    <mouseBehavior value="hover"/>
+    <imageMethod value="quad"/>
+    <imageFunction value="easeout"/>
+    <effectDuration value="0.5"/>
+    <borderSize value="2"/>
+    <borderAlpha value="0.2"/>
+    <borderColor value="13421772"/>
+    <zoomPercentage value="0"/>
+    <kenBurns value="false"/>
+    <rollOverBehavior value="smooth"/>
+    <brightnessOver value="20"/>
+    <brightnessOut value="-20"/>
+    <brightnessSpeed value="6"/>
+  </Image_Properties>
+  <Text_Properties>
+    <style value="style.css"/>
+    <show value="true"/>
+    <embedFont value="true"/>
+    <width value="300"/>
+    <hPos value="center"/>
+    <vPos value="center"/>
+    <padding value="2"/>
+    <headColor value="0"/>
+    <bodyColor value="3420433"/>
+    <smallTextBColor value="0"/>
+    <cornerRadius value="5"/>
+    <textBackAlpha value="0.5"/>
+    <smallTextBAlpha value="0.8"/>
+    <textPadding value="2"/>
+  </Text_Properties>
+  <Play_Settings>
+    <showPlay value="true"/>
+    <autoPlay value="true"/>
+    <slideshowTime value="4"/>
+    <playPausePadding value="15"/>
+    <hPos value="right"/>
+    <vPos value="bottom"/>
+  </Play_Settings>
+  <Text_Animation>
+    <slideAnim value="true"/>
+    <appear value="top"/>
+    <alphaAnim value="true"/>
+    <blurAnim value="true"/>
+    <method value="Regular"/>
+    <function value="easeInOut"/>
+    <duration value="0.5"/>
+    <wait value="0"/>
+    <delay value="0.2"/>
+  </Text_Animation>
+</settings>
