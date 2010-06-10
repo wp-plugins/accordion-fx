@@ -17,11 +17,11 @@ You can place this Accordion on any website for free without even using Flash. T
 
 Make sure your Wordpress version is equal or greater than 2.8 and your hosting provider is using PHP5.
 
-1. Upload the `accordion-fx` directory along with all its files to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+1. Upload the `accordion-fx` folder along with all its subfolders and files to the `/wp-content/plugins/` folder
+2. Activate the plugin from the **Plugins** menu in WordPress Dashboard
 3. In the post editor use the following tag to embed the Accordion: `[accordion-fx][/accordion-fx]`. Or add `<?php accordionfx_echo_embed_code(); ?>` in your templates
 4. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Accordion](http://www.flashxml.net/accordion.html "Accordion") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `accordion-fx/component/settings.xml`
-5. To use your own images, upload them to the `accordion-fx/component/images` directory and update the `accordion-fx/component/images.xml` file accordingly
+5. To use your own images, upload them to the `accordion-fx/component/images` folder and update the `accordion-fx/component/images.xml` file accordingly
 
 = Additional settings file =
 
