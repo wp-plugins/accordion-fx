@@ -2,7 +2,7 @@
 Contributors: flashxml
 Tags: images, photos, widget, post, plugin, posts, sidebar, free, flash, accordion, xml, scroll, auto, slideshow, gallery, zoom, ken, burns, portfolio, image, photo, as3, text, effects, transition, preloader, button, horizontal, vertical
 Requires at least: 2.8.0
-Tested up to: 2.9.2
+Tested up to: 3.0
 Stable tag: trunk
 
 == Description ==
