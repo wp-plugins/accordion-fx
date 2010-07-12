@@ -23,8 +23,8 @@ Make sure your Wordpress version is greater than 2.8 and your hosting provider i
 4. Activate the plugin from the **Plugins** tab in **WordPress Dashboard**
 5. Go to **Accordion FX** from the **Settings** tab and update the path in case you used a different one
 6. In the post editor use the following tag to embed the Accordion FX: `[accordion-fx][/accordion-fx]`. You could also add `<?php accordionfx_echo_embed_code(); ?>` in the PHP file of your theme
-7. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Accordion FX](http://www.flashxml.net/accordion.html "Accordion FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `flashxml/accordionfx/settings.xml`
-8. To use your own images, upload them to the `flashxml/accordionfx/images` folder and update the `flashxml/accordionfx/images.xml` file accordingly
+7. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Accordion FX](http://www.flashxml.net/accordion.html "Accordion FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `flashxml/accordion-fx/settings.xml`
+8. To use your own images, upload them to the `flashxml/accordion-fx/images` folder and update the `flashxml/accordion-fx/images.xml` file accordingly
 
 = Additional settings file =
 
