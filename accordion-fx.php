@@ -3,7 +3,7 @@
 Plugin Name: Accordion FX
 Plugin URI: http://www.flashxml.net/accordion.html
 Description: The Accordion FX might be the most advanced Flash accordion on the web. Fully XML customizable, without using Flash. And it's free!
-Version: 0.2.0
+Version: 0.2.1
 Author: FlashXML.net
 Author URI: http://www.flashxml.net/
 License: GPL2
