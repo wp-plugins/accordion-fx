@@ -5,11 +5,9 @@ Requires at least: 2.8.0
 Tested up to: 3.0.1
 Stable tag: trunk
 
-== Description ==
-
 The Accordion FX might be the most advanced Flash accordion on the web. Fully XML customizable, without using Flash. And it's free!
 
-= Main features =
+== Description ==
 
 You can place this Accordion on any website for free without even using Flash. The overall width and height can be customized up to 1680 x 1050 pixels. You may also have an unlimited number of images, advanced text effects, zoom image effects and auto play options. The tooltip is HTML/CSS formatted. Supports images (JPG, GIF, PNG, BMP), SWFs and also has external PNGs (changeable) for play-pause and next-previous buttons.
 
