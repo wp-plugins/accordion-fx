@@ -51,7 +51,7 @@ License: GPL2
 			'height' => $height,
 			'text' => trim($accordionfx_attributes[7]),
 			'component_path' => WP_CONTENT_URL . "/{$plugin_dir}/",
-			'swf_name' => 'accordion.swf',
+			'swf_name' => 'AccordionFX.swf',
 		);
 		$swf_embed['swf_path'] = $swf_embed['component_path'].$swf_embed['swf_name'];
 
