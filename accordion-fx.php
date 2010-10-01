@@ -2,7 +2,7 @@
 /*
 Plugin Name: Accordion FX
 Plugin URI: http://www.flashxml.net/accordion.html
-Description: The Accordion FX might be the most advanced Flash accordion on the web. Fully XML customizable, without using Flash. And it's free!
+Description: One of the most advanced Flash accordion on the web. Fully XML customizable without any Flash knowledge. And it's free!
 Version: 0.2.8
 Author: FlashXML.net
 Author URI: http://www.flashxml.net/
@@ -36,20 +36,16 @@ License: GPL2
 				$height = (int)$data->General_Properties->height->attributes()->value;
 			}
 		} elseif ((int)$accordionfx_attributes[4] > 0 && (int)$accordionfx_attributes[6] > 0) {
-			$width = $accordionfx_attributes[4];
-			$height = $accordionfx_attributes[6];
+			$width = (int)$accordionfx_attributes[4];
+			$height = (int)$accordionfx_attributes[6];
 		} else {
 			return '<!-- invalid Accordion FX width and / or height -->';
-		}
-
-		if ($width == 0 || $height == 0) {
-			return '';
 		}
 
 		$swf_embed = array(
 			'width' => $width,
 			'height' => $height,
-			'text' => trim($accordionfx_attributes[7]),
+			'text' => isset($accordionfx_attributes[7]) ? trim($accordionfx_attributes[7]) : '',
 			'component_path' => WP_CONTENT_URL . "/{$plugin_dir}/",
 			'swf_name' => 'AccordionFX.swf',
 		);
