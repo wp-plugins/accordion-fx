@@ -37,7 +37,7 @@ To make it work with PHP4, add `[accordion-fx width="600" height="300"][/accordi
 
 = Getting rid of the FlashXML.net label =
 
-To remove the FlashXML.net label from the top-left corner you'll need to buy the [commercial archive](http://www.flashxml.net/accordion.html#swmi-license "Accordion FX"). Once you'll do that, simply use the SWF file from the commercial archive to overwrite the SWF file from the `wp-content/flashxml/accordion-fx/` folder.
+To remove the FlashXML.net label from the top-left corner you'll need to buy the [paid package](http://www.flashxml.net/accordion.html "Accordion FX"). Once you'll do that, simply use the SWF file from the paid package to overwrite the SWF file from the `wp-content/flashxml/accordion-fx/` folder.
 
 == Screenshots ==
 
